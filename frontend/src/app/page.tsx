@@ -22,7 +22,11 @@ export default function Home() {
         analysisType: ['syntax', 'best-practices', 'security', 'performance']
       };
 
-      const response = await fetch('http://localhost:8080/api/analyze', {
+      const apiUrl = process.env.NODE_ENV === 'production' 
+        ? '/api/analyze' 
+        : 'http://localhost:8080/api/analyze';
+        
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(request)

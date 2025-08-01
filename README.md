@@ -1,10 +1,13 @@
-# AI Code Reviewer & Refactor Assistant
+# CodeCritic AI - Advanced Code Analysis & Optimization Tool
 
-A powerful web-based tool for AI-powered code analysis and refactoring with multi-model support.
+A powerful web-based tool for AI-powered code analysis and refactoring using Google Gemini Pro.
+
+## 🌐 Live Demo
+**[CodeCritic AI - Live Demo](https://your-site-name.netlify.app)** *(Update after deployment)*
 
 ## Features
 
-- 🤖 **Multi-Model AI Support**: OpenAI GPT-4, Claude, Gemini, Grok, Llama
+- 🤖 **AI-Powered Analysis**: Google Gemini Pro for intelligent code review
 - 🔍 **Smart Code Analysis**: Tree-sitter parsing with AST analysis
 - 🧠 **RAG-Enhanced Reviews**: Chroma vector database for pattern matching
 - ⚡ **Real-time Feedback**: Monaco Editor with live error highlighting
@@ -20,10 +23,10 @@ A powerful web-based tool for AI-powered code analysis and refactoring with mult
 - Lucide React for icons
 
 ### Backend
-- Fastify server with TypeScript
+- Netlify Functions (Serverless)
 - LangChain for AI orchestration
-- Tree-sitter for code parsing
-- Chroma vector database for RAG
+- Google Gemini Pro integration
+- TypeScript for type safety
 
 ## Quick Start
 
@@ -51,15 +54,24 @@ npm run build
 
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8080
-- Chroma DB: http://localhost:8000
 
-## Model Configuration
+## Environment Configuration
 
-Set up your API keys in `backend/.env`:
+Set up your API key in `backend/.env`:
 
 ```env
-OPENAI_API_KEY=your_openai_key
-ANTHROPIC_API_KEY=your_claude_key
-GOOGLE_API_KEY=your_gemini_key
-# Ollama runs locally on port 11434
+GOOGLE_API_KEY=your_google_gemini_api_key
 ```
+
+## 🚀 Deployment
+
+### Deploy to Netlify
+
+1. **One-Click Deploy**
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Nagasai125/CodeCritic-AI)
+
+2. **Manual Deployment**
+   See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+### Environment Variables for Production
+- `GOOGLE_API_KEY`: Your Google Gemini Pro API key
